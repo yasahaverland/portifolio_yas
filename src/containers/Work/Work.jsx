@@ -3,8 +3,9 @@ import './work.scss'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
+import { AppWrap, MotionWrap } from '../../wrapper'
 
-export default function Work(){
+const Work = () => {
 
         const [works, setWorks] = useState([]);
         const [filterWork, setFilterWork] = useState([]);
@@ -106,3 +107,8 @@ export default function Work(){
       </div>
     );
   }
+
+  export default AppWrap(
+    MotionWrap(Work, 'app__works'),
+    'work'
+  )

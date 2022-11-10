@@ -2,9 +2,9 @@ import React from "react";
 import './header.scss'
 import { motion } from 'framer-motion'
 import images from "../../../constants/images"
-import { AppWrap } from '../../../'
+import { AppWrap } from '../../../wrapper'
 
-export default function Header(){
+const Header = () => {
 
     const scaleVariants = {
         whileInView: {
@@ -18,7 +18,7 @@ export default function Header(){
     }
 
     return(
-        <div id='home' className='app__header app__flex'>
+        <div className='app__header app__flex'>
             <motion.div 
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 3 }}
@@ -32,10 +32,10 @@ export default function Header(){
                         </div>
                     </div>
 
-                    <dav className='tag-cpm app__flex'>
+                    <div className='tag-cpm app__flex'>
                         <p className='p-text'>Full-Stack Developer</p>
                         <p className='p-text'>Freelancer</p>
-                    </dav>
+                    </div>
                 </div>
             </motion.div>
 
@@ -68,3 +68,5 @@ export default function Header(){
         </div>
     )
 }
+
+export default AppWrap(Header, 'home');

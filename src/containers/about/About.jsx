@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './About.scss'
 import { motion } from 'framer-motion'
+import { AppWrap, MotionWrap } from '../../wrapper'
 
-export default function About(){
+const About = () => {
 
     // const [abouts, setAbouts] = useState([])
     const abouts = [
@@ -34,3 +35,8 @@ export default function About(){
         </>
     )
 }
+
+export default AppWrap(
+    MotionWrap(About, 'app__about'),
+    'about'
+  );

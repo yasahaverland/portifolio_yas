@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
 import images from "../../../constants/images"
+import { AppWrap, MotionWrap } from '../../../wrapper'
 
 import { urlFor, client } from '../../../client';
 import './footer.scss'
 
-export default function Footer(){
+const Footer = () => {
 
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -82,3 +83,9 @@ export default function Footer(){
        </>
     )
 }
+
+export default AppWrap(
+  MotionWrap(Footer, 'app__footer'),
+  'contact',
+  'app__whitebg',
+);

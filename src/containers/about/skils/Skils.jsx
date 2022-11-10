@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
 import { urlFor, client } from '../../../client';
+import { AppWrap, MotionWrap} from '../../../wrapper'
 import './Skils.scss'
 
-export default function Skils(){
+
+const Skils = () => {
 
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
@@ -24,7 +26,7 @@ export default function Skils(){
     
 
     return(
-        <div id='skills'>
+      <>
       <h2 className="head-text">Skills <span>&</span> Experiences</h2>
 
       <div className="app__skills-container">
@@ -84,6 +86,11 @@ export default function Skils(){
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
+
+export default AppWrap(
+  MotionWrap(Skils, 'skills'),
+  'skills'
+)
