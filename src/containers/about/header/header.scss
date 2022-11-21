@@ -54,6 +54,7 @@
     .badge-cpm, .tag-cpm {
         padding: 1rem 2rem;
         border: var(--white-color);
+        background-color: #fff9f9;
         border-radius: 15px;
         flex-direction: row;
         width: auto;
@@ -99,7 +100,7 @@
         box-shadow: 0 0 20px #0000001a;
 
         img {
-            width: 60%;
+            width: 64%;
             height: 60%;
         }
     }

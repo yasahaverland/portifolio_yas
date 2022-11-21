@@ -91,6 +91,6 @@ const Skils = () => {
 }
 
 export default AppWrap(
-  MotionWrap(Skils, 'skills'),
+  MotionWrap(Skils, 'app__skills'),
   'skills'
 )
